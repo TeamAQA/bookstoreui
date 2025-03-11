@@ -3,18 +3,18 @@
   <div class="float-right">
     <a href="#"
        (click)="onOpenModal('cart')"
-       style="margin-right: 10px; color: white">Koszyk ({{countCartItems()}})</a>
+       style="margin-right: 10px; color: white">🛒 Koszyk ({{countCartItems()}})</a>
 
     <a href="#"
        (click)="onOpenModal('authorsModal')"
-       style="margin-right: 10px; color: white"> [A] Lista autorów ({{countAuthors()}})</a>
+       style="margin-right: 10px; color: white"> 👤 Autorzy ({{countAuthors()}})</a>
     <a href="#"
        (click)="onOpenModal('booksModal')"
-       style="margin-right: 10px; color: white"> [A] Lista książek ({{countBooks()}})</a>
+       style="margin-right: 10px; color: white"> 📚 Książki ({{countBooks()}})</a>
 
     <a href="#"
        (click)="onOpenModal('ordersModal')"
-       style="margin-right: 10px; color: white"> [A] Lista zamówień ({{countOrders()}})</a>
+       style="margin-right: 10px; color: white"> 📦 Zamówienia ({{countOrders()}})</a>
   </div>
 </nav>
 
@@ -272,13 +272,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Lista książek {{countAdminBooks()}}</h5>
+        <h5 class="modal-title">Lista książek {{countBooks()}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <div *ngFor="let book of admin_books" class="col-md-12 col-xl-12">
+        <div *ngFor="let book of books" class="col-md-12 col-xl-12">
           <div class="card m-b-30">
             <div class="card-body row">
               <div class="col-3">
